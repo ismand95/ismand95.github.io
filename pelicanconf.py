@@ -42,4 +42,4 @@ SOCIAL = (('linkedin', 'https://linkedin.com/in/anders-rye-jacobsen'),
 DEFAULT_PAGINATION = 7
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
