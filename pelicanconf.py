@@ -2,15 +2,24 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Anders Rye Jacobsen'
-SITENAME = "Anders' Blog"
-SITEURL = ''
-
 PATH = 'content'
+
+THEME = 'FlexTheme'
+
+AUTHOR = 'Anders Rye Jacobsen'
+SITENAME = 'Anders\' Blog'
+SITESUBTITLE = 'Economics student who loves everything technology and programming'
+SITEDESCRIPTION = 'My thoughts and writings about technology, data-science, life and everything in between'
+FAVICON = '/images/favicon.ico'
+BROWSER_COLOR = '#333333'
+PYGMENTS_STYLE = 'monokai'
+SITEURL = ''
 
 TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG = 'en'
+OG_LOCALE = 'en_US'
+LOCALE = 'en_US'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -19,19 +28,12 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('linkedin', 'https://linkedin.com/in/anders-rye-jacobsen'),
+          ('github', 'https://github.com/ismand95'),)
 
 DEFAULT_PAGINATION = 10
-
-THEME = '/Users/andersrye/pelican_themes/Flex'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
