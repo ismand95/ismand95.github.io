@@ -1,104 +1,123 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-143926079-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-143926079-1');
-</script>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="True" name="HandheldFriendly"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="" name="robots"/>
-<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet"/>
-<link href="http://localhost:8000/theme/stylesheet/style.min.css" rel="stylesheet" type="text/css"/>
-<link href="http://localhost:8000/theme/pygments/default.min.css" rel="stylesheet" type="text/css"/>
-<link href="http://localhost:8000/theme/font-awesome/css/fontawesome.css" rel="stylesheet" type="text/css"/>
-<link href="http://localhost:8000/theme/font-awesome/css/brands.css" rel="stylesheet" type="text/css"/>
-<link href="http://localhost:8000/theme/font-awesome/css/solid.css" rel="stylesheet" type="text/css"/>
-<link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-<link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
-<!-- Chrome, Firefox OS and Opera -->
-<meta content="#333333" name="theme-color"/>
-<!-- Windows Phone -->
-<meta content="#333333" name="msapplication-navbutton-color"/>
-<!-- iOS Safari -->
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<!-- Microsoft EDGE -->
-<meta content="#333333" name="msapplication-TileColor"/>
-<meta content="Anders Rye Jacobsen" name="author">
-<meta content="Der er nogle helt fundamentale udfordringer med de dataredskaber, vi benytter - det er på tide, vi tænker ud af Excel-kassen" name="description">
-<meta content="data, programming, python, excel, SQL" name="keywords"/>
-<meta content="Anders' Blog" property="og:site_name">
-<meta content="Det er på høje tid, vi taler om, hvordan vi arbejder med data!" property="og:title">
-<meta content="Der er nogle helt fundamentale udfordringer med de dataredskaber, vi benytter - det er på tide, vi tænker ud af Excel-kassen" property="og:description">
-<meta content="en_US" property="og:locale">
-<meta content="http://localhost:8000/data.html" property="og:url"/>
-<meta content="article" property="og:type"/>
-<meta content="2019-07-16 00:00:00+02:00" property="article:published_time"/>
-<meta content="2019-07-16 00:00:00+02:00" property="article:modified_time"/>
-<meta content="http://localhost:8000/author/anders-rye-jacobsen.html" property="article:author"/>
-<meta content="Opinions" property="article:section">
-<meta content="data" property="article:tag"/>
-<meta content="programming" property="article:tag"/>
-<meta content="python" property="article:tag"/>
-<meta content="excel" property="article:tag"/>
-<meta content="SQL" property="article:tag"/>
-<meta content="" property="og:image"/>
-<title>Anders' Blog – Det er på høje tid, vi taler om, hvordan vi arbejder med data!</title>
-</meta></meta></meta></meta></meta></meta></meta></head>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/pygments/default.min.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/font-awesome/css/solid.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333333">
+
+<meta name="author" content="Anders Rye Jacobsen" />
+<meta name="description" content="Der er nogle helt fundamentale udfordringer med de dataredskaber, vi benytter - det er på tide, vi tænker ud af Excel-kassen" />
+<meta name="keywords" content="data, programming, python, excel, SQL">
+
+<meta property="og:site_name" content="Anders' Blog"/>
+<meta property="og:title" content="Det er på høje tid, vi taler om, hvordan vi arbejder med data!"/>
+<meta property="og:description" content="Der er nogle helt fundamentale udfordringer med de dataredskaber, vi benytter - det er på tide, vi tænker ud af Excel-kassen"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://localhost:8000/data.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-07-16 00:00:00+02:00"/>
+<meta property="article:modified_time" content="2019-07-16 00:00:00+02:00"/>
+<meta property="article:author" content="http://localhost:8000/author/anders-rye-jacobsen.html">
+<meta property="article:section" content="Opinions"/>
+<meta property="article:tag" content="data"/>
+<meta property="article:tag" content="programming"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="excel"/>
+<meta property="article:tag" content="SQL"/>
+<meta property="og:image" content="">
+
+  <title>Anders' Blog &ndash; Det er på høje tid, vi taler om, hvordan vi arbejder med data!</title>
+
+</head>
 <body>
-<aside>
-<div>
-<a href="http://localhost:8000">
-<img alt="Anders Rye Jacobsen" src="http://localhost:8000/theme/img/profile.png" title="Anders Rye Jacobsen"/>
+  <aside>
+    <div>
+      <a href="http://localhost:8000">
+        <img src="http://localhost:8000/theme/img/profile.png" alt="Anders Rye Jacobsen" title="Anders Rye Jacobsen">
+      </a>
+      <h1><a href="http://localhost:8000">Anders Rye Jacobsen</a></h1>
+
+<p><br>Economics student who loves everything<br> technology, coding and data-science related</p>
+      <nav>
+        <ul class="list">
+          <li><a href="http://localhost:8000/pages/about.html#about">About</a></li>
+          <li><a href="http://localhost:8000/pages/contact.html#contact">Contact</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-linkedin" href="https://linkedin.com/in/anders-rye-jacobsen" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/ismand95" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://localhost:8000">    Home
 </a>
-<h1><a href="http://localhost:8000">Anders Rye Jacobsen</a></h1>
-<p><br/>Economics student who loves everything<br/> technology, coding and data-science related</p>
-<nav>
-<ul class="list">
-<li><a href="http://localhost:8000/pages/about.html#about">About</a></li>
-<li><a href="http://localhost:8000/pages/contact.html#contact">Contact</a></li>
-</ul>
-</nav>
-<ul class="social">
-<li>
-<a class="sc-linkedin" href="https://linkedin.com/in/anders-rye-jacobsen" target="_blank">
-<i class="fab fa-linkedin">
-</i>
-</a></li>
-<li>
-<a class="sc-github" href="https://github.com/ismand95" target="_blank">
-<i class="fab fa-github">
-</i>
-</a></li>
-</ul>
-</div>
-</aside>
-<main>
-<nav>
-<a href="http://localhost:8000">    Home
-</a>
-<a href="/archives">Archive</a>
-<a href="/categories">Categories</a>
-</nav>
+
+      <a href="/archives">Archive</a>
+      <a href="/categories">Categories</a>
+
+
+    </nav>
+
 <article class="single">
-<header>
-<h1 id="data">Det er på høje tid, vi taler om, hvordan vi arbejder med data!</h1>
-<p>
+  <header>
+      
+    <h1 id="data">Det er på høje tid, vi taler om, hvordan vi arbejder med data!</h1>
+    <p>
           Posted on Tue 16 July 2019 in <a href="http://localhost:8000/category/opinions.html">Opinions</a>
-</p>
-</header>
-<div>
-<hr/>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <hr>
+
 <p>Når jeg bliver bedt beskrive mig selv, er mit afsæt stort set altid, at jeg er en teknisk person – og hvad i alverden 
 skal det så sige? At jeg er dårlig til sociale relationer? At jeg ikke forstår dynamikker i menneskelig kontakt eller at 
 jeg samtlige weekender står indsmurt i olie med mine fingre i motorer og mekanik? Nej, det er vist ikke tilfældet, men at 
@@ -118,8 +137,9 @@ den front i de år – et postulat, der vist stadig holder stik, så vidt jeg ve
 <p>Nu var den første glød skold-hed, vidensbegæret højt og interessen for IT bevægede sig med lysets hast. Jeg greb til 
 mig af open-source-communities, software, programmering og alt, hvad der bare havde et svagt snært IT.</p>
 <div style="text-align:center;">
-<i>Fast-forward til min nylige introduktion på arbejdsmarkedet.</i>
+    <i>Fast-forward til min nylige introduktion på arbejdsmarkedet.</i>
 </div>
+
 <p>Som det titelmæssige lavthængende frugt er det med en relativ grad af forsigtighed, at man vælger at implementere sine 
 egne metoder til opgaveløsning. Man udfører som regel opgaverne lidt småmekanisk efter nøje instruktion – måske tit 
 efter selv samme hentydning for at skabe fejlsikkerhed.</p>
@@ -132,7 +152,7 @@ teknisk dygtig af at spille Angry Birds på en iPad i frikvartererne og at tekni
 Disse tre grundlæggende udfordringer vil jeg prøve at tage op til debat, og i senere artikler vise nogle alternativer, 
 som forhåbentligt kan bedre læserens tekniske hverdag. Jeg tror ikke disse punkter må ses som tre uafhængige elementer, 
 men nærmere som sammenhængende strukturelle problemer i den generelle måde, som vi arbejder med data på.</p>
-<p><b></b></p>
+<p><b></p>
 <ol>
 <li>
 <p>'Black-box' status for programmering og IT</p>
@@ -144,8 +164,9 @@ men nærmere som sammenhængende strukturelle problemer i den generelle måde, s
 <p>Licensering og proprietært ukontrollerbart software</p>
 </li>
 </ol>
-<p></p></div></article></main></body></html>
-<hr/>
+<p></b></p>
+<hr>
+
 <h3>1. 'Black-box' status for programmering og IT</h3>
 <p>Oftere og oftere bliver teknologi og tekniske innovationer mystificeret i såvel medier som daglig tale. Det er lidt fra 
 mit synspunkt som om, at "Buzzwords" skaber et teknisk ethos for afsenderen, der absolut ikke må betvivles. Jeg synes, 
@@ -172,7 +193,8 @@ IT-udvikling og kreativitet er <u>ikke</u> forbeholdt datalogi-kandidaterne.</p>
 <a href="https://automatetheboringstuff.com/">"Automate the Boring Stuff with Python"</a>. Heri tager Sweigart læseren med
 på en IT-rejse uden sidestykke og viser, at de fjollede manuelle opgaver simpelt og elegant kan optimeres og eksekveres,
 så der er mere tid til de meningsfyldte og værdiskabende opgaver i dagligdagen!</p>
-<hr/>
+<hr>
+
 <h3>2. Excel-"monopolen"</h3>
 <p>Som en <i>(til tider lidt små-ekstrem)</i> open-source entusiast havde jeg en nærmest måbende reaktion, da jeg fandt
 ud af, hvor central en placering Microsoft Office har i det moderne kontorlandskab.</p>
@@ -204,7 +226,8 @@ Det er mig et absolut og komplet mysterie, at man i en tidsalder, hvor complianc
 står øverst på globale virksomheders ønskeliste, overlader så meget tillid til et redskab, der (i mange tilfælde) lever 
 <u>langt</u> over evne.</p>
 <p>Lad os tænke ud af vores statiske arbejdsgange og åbne øjnene for, at Excel ikke er en <i>"end-all/be-all"</i> løsning. </p>
-<hr/>
+<hr>
+
 <h3>3. Licensering og proprietært ukontrollerbart software</h3>
 <p>For den uinformerede læser vil jeg kort opridse free and open-source software (FOSS). FOSS er en filosofi og tankegang,
 der praktisk talt er ældre end IT selv. Software er FOSS, hvis kildekoden (selve programmet) er stillet til rådighed
@@ -225,7 +248,8 @@ back-port sin kode-base, skulle man være uenig med den retning, ens software ha
 <p>For mig at se, er FOSS den ultimative garanti. Al kildekode er frit tilgængeligt, så det er altid muligt at verificere
 eller ændre på koden, så udgangspunktet bliver sat i ens egne specifikke usecase og ikke så meget i og ikke i 
 software-leverandørens interesser. Man er i kontrol af software, ikke omvendt.</p>
-<hr/>
+<hr>
+
 <h3>Konklusion</h3>
 <p>Det blev en meget lang måde at sige, at jeg ikke er spor begejstret for Microsoft Office - og måske lige genereliserende
 og grov nok i kanterne, men jeg står nu fuldbyrdet ved ovenstående. For mig at se, er kerneoperationer for data-drevne
@@ -241,28 +265,39 @@ fællesskab løfte de tilgængelige databehandlingsværktøjer?</p>
 Excel/konventionel løsning og dernæst præsenterer en alternativ måde at løse problemet på vha. FOSS redskaber. 
 Det er vigtigt for mig at markere, hvor tilgængelige og stærke alternative redskaber er, når vi skal arbejde med data! </p>
 <p>Jeg håber, du vil læse med!</p>
-<hr/>
+<hr>
+
 <p>Lidt ekstra læsning til de interesserede:</p>
 <ul>
 <li><a href="https://blogs.oracle.com/smb/10-of-the-costliest-spreadsheet-boo-boos-in-history">https://blogs.oracle.com/smb/10-of-the-costliest-spreadsheet-boo-boos-in-history</a></li>
 <li><a href="https://www.businessinsider.com/stupid-spreadsheet-mistakes-could-lead-to-corporate-disaster-2015-4?r=US&amp;IR=T">https://www.businessinsider.com/stupid-spreadsheet-mistakes-could-lead-to-corporate-disaster-2015-4?r=US&amp;IR=T</a></li>
 <li><a href="https://www.forbes.com/sites/metabrown/2017/12/31/3-reasons-why-replacing-microsoft-excel-is-worth-money-to-a-boss/">https://www.forbes.com/sites/metabrown/2017/12/31/3-reasons-why-replacing-microsoft-excel-is-worth-money-to-a-boss/</a></li>
 </ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://localhost:8000/tag/data.html">data</a>
+      <a href="http://localhost:8000/tag/programming.html">programming</a>
+      <a href="http://localhost:8000/tag/python.html">python</a>
+      <a href="http://localhost:8000/tag/excel.html">excel</a>
+      <a href="http://localhost:8000/tag/sql.html">SQL</a>
+    </p>
+  </div>
 
-<div class="tag-cloud">
-<p>
-<a href="http://localhost:8000/tag/data.html">data</a>
-<a href="http://localhost:8000/tag/programming.html">programming</a>
-<a href="http://localhost:8000/tag/python.html">python</a>
-<a href="http://localhost:8000/tag/excel.html">excel</a>
-<a href="http://localhost:8000/tag/sql.html">SQL</a>
-</p>
-</div>
 
-<footer>
-<p>©  Anders Rye Jacobsen 2019</p>
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  Anders Rye Jacobsen 2019</p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p> </footer>
+</p>    </footer>
+  </main>
+
+
+
 
 <script type="application/ld+json">
 {
@@ -275,3 +310,5 @@ Det er vigtigt for mig at markere, hvor tilgængelige og stærke alternative red
 }
 </script>
 
+</body>
+</html>
