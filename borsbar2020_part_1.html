@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-143926079-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143926079-1');
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="True" name="HandheldFriendly"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="" name="robots"/>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet"/>
+  <link href="https://ismand95.github.io/theme/stylesheet/style.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ismand95.github.io/theme/pygments/default.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ismand95.github.io/theme/font-awesome/css/fontawesome.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ismand95.github.io/theme/font-awesome/css/brands.css" rel="stylesheet" type="text/css"/>
+  <link href="https://ismand95.github.io/theme/font-awesome/css/solid.css" rel="stylesheet" type="text/css"/>
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta content="#333333" name="theme-color"/>
+  <!-- Windows Phone -->
+  <meta content="#333333" name="msapplication-navbutton-color"/>
+  <!-- iOS Safari -->
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
+  <!-- Microsoft EDGE -->
+  <meta content="#333333" name="msapplication-TileColor"/>
+  <meta content="Anders Rye Jacobsen" name="author">
+   <meta content="Fixing the infrastructure of the Stock-Market Bar's back-end." name="description">
+    <meta content="data, full-stack development, Docker" name="keywords"/>
+    <meta content="Anders' Blog" property="og:site_name">
+     <meta content="Developing Stock-Market Bar Software 2020, Part 1: Dockerize, Modernize and Optimize" property="og:title">
+      <meta content="Fixing the infrastructure of the Stock-Market Bar's back-end." property="og:description">
+       <meta content="en_US" property="og:locale">
+        <meta content="https://ismand95.github.io/borsbar2020_part_1.html" property="og:url"/>
+        <meta content="article" property="og:type"/>
+        <meta content="2019-12-09 18:30:00+01:00" property="article:published_time"/>
+        <meta content="2019-12-09 18:30:00+01:00" property="article:modified_time"/>
+        <meta content="https://ismand95.github.io/author/anders-rye-jacobsen.html" property="article:author"/>
+        <meta content="Python" property="article:section">
+         <meta content="data" property="article:tag"/>
+         <meta content="full-stack development" property="article:tag"/>
+         <meta content="Docker" property="article:tag"/>
+         <meta content="" property="og:image"/>
+         <title>
+          Anders' Blog – Developing Stock-Market Bar Software 2020, Part 1: Dockerize, Modernize and Optimize
+         </title>
+        </meta>
+       </meta>
+      </meta>
+     </meta>
+    </meta>
+   </meta>
+  </meta>
+ </head>
+ <body>
+  <aside>
+   <div>
+    <a href="https://ismand95.github.io">
+     <img alt="Anders Rye Jacobsen" src="https://ismand95.github.io/theme/img/profile.png" title="Anders Rye Jacobsen"/>
+    </a>
+    <h1>
+     <a href="https://ismand95.github.io">
+      Anders Rye Jacobsen
+     </a>
+    </h1>
+    <p>
+     <br/>
+     Economics student who loves everything
+     <br/>
+     technology, coding and data-science related
+    </p>
+    <nav>
+     <ul class="list">
+      <li>
+       <a href="https://ismand95.github.io/pages/about.html#about">
+        About
+       </a>
+      </li>
+      <li>
+       <a href="https://ismand95.github.io/pages/contact.html#contact">
+        Contact
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <ul class="social">
+     <li>
+      <a class="sc-linkedin" href="https://linkedin.com/in/anders-rye-jacobsen" target="_blank">
+       <i class="fab fa-linkedin">
+       </i>
+      </a>
+     </li>
+     <li>
+      <a class="sc-github" href="https://github.com/ismand95" target="_blank">
+       <i class="fab fa-github">
+       </i>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </aside>
+  <main>
+   <nav>
+    <a href="https://ismand95.github.io">
+     Home
+    </a>
+    <a href="/archives">
+     Archive
+    </a>
+    <a href="/categories">
+     Categories
+    </a>
+   </nav>
+   <article class="single">
+    <header>
+     <h1 id="borsbar2020_part_1">
+      Developing Stock-Market Bar Software 2020, Part 1: Dockerize, Modernize and Optimize
+     </h1>
+     <p>
+      Posted on Mon 09 December 2019 in
+      <a href="https://ismand95.github.io/category/python.html">
+       Python
+      </a>
+     </p>
+    </header>
+    <div>
+     <hr/>
+     <p>
+      <i>
+       If you haven't yet read my blog about the Stock-Market Bar Software from February this year, I suggest you read it
+       <a href="https://andersryejacobsen.media/borsbar">
+        here
+       </a>
+       before continuing with this post
+      </i>
+     </p>
+     <h2>
+      A can of worms
+     </h2>
+     <p>
+      As February approaches it is once again time to look into the Stock-Market Bar Software. When I reopened my GitHub 
+repository and started looking thorugh my code from last year, I felt a mix of different emotions. On the one hand I 
+was terrified at the
+      <i>
+       "can of worms"
+      </i>
+      I had obviously created. I hadn't really done much to document the code and 
+not every element was terribly well-written. I was moreover also really happy. Happy because a lot of improvements 
+suddenly became terribly obvious to me. This must have meant one thing - I've gotten better at writing code in the 
+last year, and this benchmark alone should always be interpreted as a huge accomplishment for anyone.
+     </p>
+     <h2>
+      Getting the infrastructure ready
+     </h2>
+     <p>
+      Back in January I got a helping hand from my Computer Science friend, whom had some great ideas about how to handle the
+traffic within the backend of the software. For the 2020 event however I've chosen to set this up myself and in the 
+meantime practice my Linux/Networking skills.
+     </p>
+     <p>
+      The main problem at hand is that the party is going on at the university campus. The only accessible network at this 
+location is the international Eduroam. This network however is incredibly restrictive and does not allow routing 
+from outside the network, it is also restrictive within the LAN, so having all data inputs coming from people on Wi-Fi
+isn't an option either
+      <i>
+       (although it also does raise numerous practical challenges and annoyances)
+      </i>
+      .
+     </p>
+     <p>
+      My Computer Science friend, Ulrik and I solved this obstacle in a really cool way back in January. We used "software 
+defined networking" (SDN) through
+      <a href="https://www.zerotier.com/">
+       ZeroTier
+      </a>
+      and a reverse
+      <a href="https://www.nginx.com/">
+       Nginx
+      </a>
+      proxy to route the traffic "
+      <u>
+       below
+      </u>
+      " the limits of the university network.
+     </p>
+     <p>
+      This implementation may sound awfully convoluted but I'll try to explain it. The input server is hosted
+on my laptop. This laptop is also hosting the entire software stack controlling both the prices and the dashboard 
+broadcasted to a projector in the main room of the party.
+     </p>
+     <p>
+      The input server is a simple webserver
+      <i>
+       (built using the Flask framework, running in a Docker Container for the sake
+of privilege isolation and dependency mangement)
+      </i>
+      , where the bartenders can login and register every sale of a 
+beer/drink etc. This means that I am able (in real time) to calculate the relative changes in prices dependent upon the 
+increase/decrease in demand for a certain drink.
+     </p>
+     <p>
+      So, to circumvent the networking challenges the back-end infrastructure is designed this way:
+     </p>
+     <ul>
+      <li>
+       <p>
+        A bartender queries
+        <a href="https://borsbar.me">
+         https://borsbar.me
+        </a>
+        . This domain is routed to my Linux Virtual Private Server 
+hosted at
+        <a href="https://www.digitalocean.com">
+         Digital Ocean
+        </a>
+       </p>
+      </li>
+      <li>
+       <p>
+        Any traffic going to the server at port 80 or 443 is then forwarded to my Nginx reverse proxy running at that server.
+       </p>
+       <ul>
+        <li>
+         <p>
+          This is all running within two Docker Containers. One running the
+          <a href="https://certbot.eff.org">
+           CertBot
+          </a>
+          Docker Image 
+from
+          <a href="https://letsencrypt.org">
+           Let's Encrypt
+          </a>
+          taking care 
+of all SSL encryption/certificate management and another handling the Nginx proxy.
+         </p>
+        </li>
+        <li>
+         <p>
+          The server only accepts SSL connections and re-routes HTTP requests at port 80 to a secure HTTPS connection at 
+port 443.
+         </p>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <p>
+        The Nginx reverse proxy then takes all incoming traffic at port 443 and forwards it to my synthetic ZeroTier IP at 
+port 5000, which my Flask Docker Container is running at. However, this Flask server is running locally on my laptop.
+       </p>
+       <ul>
+        <li>
+         <p>
+          My ZeroTier client looks (for the Nginx server) like a completely normal machine on the LAN - although I am 
+actually located about 1000 km away from my server, which is located in Frankfurt, Germany.
+         </p>
+        </li>
+        <li>
+         <p>
+          All traffic is encrypted using Peer-to-Peer technology, so I don't need a central hub or VPN to manage this 
+connection. It is secure and I get a lot more control over what I'm able to host. Another advantage is that, no 
+matter which network I am using for my laptop, I'll always be able to access the input server using the domain 
+above - that's some pretty freaking cool tech!
+         </p>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <h2>
+      What to do next?
+     </h2>
+     <p>
+      So! All is fine'n'dandy, I'm able to accept connections from anywhere. Use best practises and encrypt all the traffic 
+automatically, and generally have a very robust back-end using enterprise-level secure communications and 
+very solid software.
+     </p>
+     <p>
+      Now it is time to look a bit more into the actual code of my software, but I think I'll pick that up in one of my next 
+blog-posts.
+     </p>
+    </div>
+    <div class="tag-cloud">
+     <p>
+      <a href="https://ismand95.github.io/tag/data.html">
+       data
+      </a>
+      <a href="https://ismand95.github.io/tag/full-stack-development.html">
+       full-stack development
+      </a>
+      <a href="https://ismand95.github.io/tag/docker.html">
+       Docker
+      </a>
+     </p>
+    </div>
+   </article>
+   <footer>
+    <p>
+     ©  Anders Rye Jacobsen 2019
+    </p>
+    <p>
+     Powered by
+     <a href="http://getpelican.com" target="_blank">
+      Pelican
+     </a>
+     -
+     <a href="https://github.com/alexandrevicenzi/flex" target="_blank">
+      Flex
+     </a>
+     theme by
+     <a href="http://alexandrevicenzi.com" target="_blank">
+      Alexandre Vicenzi
+     </a>
+    </p>
+   </footer>
+  </main>
+  <script type="application/ld+json">
+   {
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Anders' Blog ",
+  "url" : "https://ismand95.github.io",
+  "image": "",
+  "description": "My thoughts and writings about technology, data-science, life and everything in between"
+}
+  </script>
+ </body>
+</html>
